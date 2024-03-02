@@ -1,10 +1,14 @@
 import './App.css'
+import {Route, Routes} from "react-router-dom";
+import MainPage from "./pages/mainPage/mainPage.tsx";
 
 function App() {
 
   return (
     <>
-      <p>hello buddy</p>
+      <Routes>
+        <Route path={'/'} element={<MainPage />} />
+      </Routes>
     </>
   )
 }
