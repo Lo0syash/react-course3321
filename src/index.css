@@ -5,3 +5,8 @@
 .container{
     @apply max-w-[1520px] mx-auto;
 }
+
+body{
+    font-family: 'Montserrat Alternates', sans-serif;
+    @apply bg-black;
+}
