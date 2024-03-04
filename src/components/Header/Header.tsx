@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className={'py-[15px]'}>
+        <header className={'py-[15px] bg-black'}>
             <div className="container">
                 <div
                     className={'flex justify-between items-center'}
@@ -13,8 +13,8 @@ export default function Header() {
                             >
                             <span className={'flex items-center gap-[25px]'}>
                                 <hr className={'w-[3px] h-[43px] bg-[#D9D9D9] opacity-40'}/>
-                                <li><a href="#" className={'text-white text-[16px] uppercase'}>главная</a></li>
-                                <li><a href="#" className={'text-white text-[16px] uppercase'}>каталог</a></li>
+                                <li><a href="/" className={'text-white text-[16px] uppercase'}>главная</a></li>
+                                <li><a href="/catalog" className={'text-white text-[16px] uppercase'}>каталог</a></li>
                                 <hr className={'w-[3px] h-[43px] bg-[#D9D9D9] opacity-40'}/>
                             </span>
                                 <li><a href="#" className={'text-white text-[16px] uppercase'}>информация</a></li>
