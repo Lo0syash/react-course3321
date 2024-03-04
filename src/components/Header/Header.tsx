@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function Header() {
     return (
         <header className={'py-[15px] bg-black'}>
@@ -13,11 +15,11 @@ export default function Header() {
                             >
                             <span className={'flex items-center gap-[25px]'}>
                                 <hr className={'w-[3px] h-[43px] bg-[#D9D9D9] opacity-40'}/>
-                                <li><a href="/" className={'text-white text-[16px] uppercase'}>главная</a></li>
-                                <li><a href="/catalog" className={'text-white text-[16px] uppercase'}>каталог</a></li>
+                                <li className={'text-white text-[16px] uppercase'}><Link to={'/'}>главная</Link></li>
+                                <li className={'text-white text-[16px] uppercase'}><Link to={'/catalog'}>каталог</Link></li>
                                 <hr className={'w-[3px] h-[43px] bg-[#D9D9D9] opacity-40'}/>
                             </span>
-                                <li><a href="#" className={'text-white text-[16px] uppercase'}>информация</a></li>
+                                <li className={'text-white text-[16px] uppercase'}><Link to={'/'}>информация</Link></li>
                             </ul>
                         </nav>
                     </div>

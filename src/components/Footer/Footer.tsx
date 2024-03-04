@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -14,11 +15,11 @@ const Footer = () => {
                             >
                             <span className={'flex items-center gap-[25px]'}>
                                 <hr className={'w-[3px] h-[43px] bg-[#D9D9D9] opacity-40'}/>
-                                <li><a href="/" className={'text-white text-[16px] uppercase'}>главная</a></li>
-                                <li><a href="/catalog" className={'text-white text-[16px] uppercase'}>каталог</a></li>
+                                <li className={'text-white text-[16px] uppercase'}><Link to={'/'}>главная</Link></li>
+                                <li className={'text-white text-[16px] uppercase'}><Link to={'/catalog'}>каталог</Link></li>
                                 <hr className={'w-[3px] h-[43px] bg-[#D9D9D9] opacity-40'}/>
                             </span>
-                                <li><a href="#" className={'text-white text-[16px] uppercase'}>информация</a></li>
+                                <li className={'text-white text-[16px] uppercase'}><Link to={'/'}>информация</Link></li>
                             </ul>
                         </nav>
                     </div>
@@ -26,8 +27,10 @@ const Footer = () => {
                         className={'flex items-center gap-[6px] flex-col'}
                     >
                         <p className={'text-white text-[16px] uppercase'}>г. Казань, ул. бари галеева 3а </p>
-                        <a href="tel:+7 (927) 482-09-82" className={'text-white text-[16px] uppercase'}>+7 (927) 482-09-82</a>
-                        <a href="mailto:Kuzmakolom@gMAIL.RU" className={'text-white text-[16px] uppercase'}>Kuzmakolom@gMAIL.RU</a>
+                        <a href="tel:+7 (927) 482-09-82" className={'text-white text-[16px] uppercase'}>+7 (927)
+                            482-09-82</a>
+                        <a href="mailto:Kuzmakolom@gMAIL.RU"
+                           className={'text-white text-[16px] uppercase'}>Kuzmakolom@gMAIL.RU</a>
                     </div>
                 </div>
             </div>
