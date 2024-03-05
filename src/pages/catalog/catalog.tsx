@@ -1,27 +1,7 @@
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import ProductCard from "../../components/ProductCard/ProductCard.tsx";
-
-const ProductData = [
-    {
-        id: Math.random(),
-        image: '/assets/images/products/tshirt_smile.jpg',
-        name: 'Рубашка СВЭГ',
-        price: '9999',
-    },
-    {
-        id: Math.random(),
-        image: '/assets/images/products/black_shirt.jpg',
-        name: 'Рубашка СВЭГ',
-        price: '9999',
-    },
-    {
-        id: Math.random(),
-        image: '/assets/images/products/twhirt_sad.jpg',
-        name: 'Рубашка СВЭГ',
-        price: '9999',
-    }
-]
+import ProductData from "../../components/ProductCard/ProductData.tsx";
 
 const Catalog = () => {
     return (
