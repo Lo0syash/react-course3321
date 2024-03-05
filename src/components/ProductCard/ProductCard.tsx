@@ -1,8 +1,11 @@
+import {Link} from "react-router-dom";
+
 interface Produсt {
     Card: {
         id: number;
         image: string;
         name: string;
+        description: string;
         price: string;
     }
 }
@@ -10,7 +13,7 @@ interface Produсt {
 const ProductCard = ({Card}: Produсt) => {
     return (
         <>
-            <li
+            <Link to={`/catalog/item/${Card.id}`}
                 className={'max-w-[384px]'}
             >
                 {/*<img src="/assets/images/products/tshirt_smile.jpg" alt="twhisrt smile"/>*/}
@@ -41,7 +44,7 @@ const ProductCard = ({Card}: Produсt) => {
                         </div>
                     </div>
                 </div>
-            </li>
+            </Link>
         </>
     );
 };

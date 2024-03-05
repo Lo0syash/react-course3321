@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path={'/'} element={<MainPage />} />
             <Route path={'/catalog'} element={<Catalog />} />
-            <Route path={'/catalog/item'} element={<CatalogItem />} />
+            <Route path={'/catalog/item/:id'} element={<CatalogItem />} />
       </Routes>
     </>
   )

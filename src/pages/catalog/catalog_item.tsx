@@ -1,7 +1,23 @@
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
+import ProductData from "../../components/ProductCard/ProductData.tsx";
+import {useEffect} from "react";
+import {useNavigate, useParams} from "react-router-dom";
+import {name} from "autoprefixer";
 
 const CatalogItem = () => {
+    const {id} = useParams<{id:string}>()
+    const navigate = useNavigate();
+    useEffect(()=>{
+        if (!id) {
+            navigate('/');
+        }
+    })
+
+    const searchData = ProductData.filter(product => {
+        return product.id.toString() === id;
+    });
+
     return (
         <>
             <Header/>
@@ -15,36 +31,36 @@ const CatalogItem = () => {
                             <p className={'text-xl text-black'}>\</p>
                             <li><a href="/catalog" className={'text-xl text-black'}>Каталог</a></li>
                             <p className={'text-xl text-black'}>\</p>
-                            <li><a href="#" className={'text-xl text-black'}>Рубашка СВЭГ</a></li>
+                            <li><a href="#" className={'text-xl text-black'}>{searchData[0].name}</a></li>
                         </ul>
                     </div>
                     <div className={'my-[23px] flex justify-between'}>
                         <div
                             className={'flex flex-wrap justify-between max-w-[1053px]'}
                         >
-                            <img src="/assets/images/products/black_shirt.jpg" alt="" className={'w-[508px]'}/>
-                            <img src="/assets/images/products/black_shirt.jpg" alt="" className={'w-[508px]'}/>
-                            <img src="/assets/images/products/black_shirt.jpg" alt=""
+                            <img src={searchData[0].image} alt="" className={'w-[508px]'}/>
+                            <img src={searchData[0].image} alt="" className={'w-[508px]'}/>
+                            <img src={searchData[0].image} alt=""
                                  className={'w-[340px] mt-[23px]'}/>
-                            <img src="/assets/images/products/black_shirt.jpg" alt=""
+                            <img src={searchData[0].image} alt=""
                                  className={'w-[340px] mt-[23px]'}/>
-                            <img src="/assets/images/products/black_shirt.jpg" alt=""
+                            <img src={searchData[0].image} alt=""
                                  className={'w-[340px] mt-[23px]'}/>
                         </div>
                         <div>
                             <div>
                                 <h1
                                     className={'text-black text-4xl'}
-                                >Рубашка СВЭГ</h1>
+                                >{searchData[0].name}</h1>
                                 <p
                                     className={'mt-2 text-4xl text-[#735184]'}
-                                >9999 ₽</p>
+                                >{searchData[0].price} ₽</p>
                             </div>
                             <div
                                 className={'flex flex-col gap-[31px] mt-[53px]'}
                             >
                                 <select name="" id=""
-                                    className={'w-[445px] h-[75px] bg-black text-white text-4xl text-center'}
+                                        className={'w-[445px] h-[75px] bg-black text-white text-4xl text-center'}
                                 >
                                     <option value="" selected>Черный</option>
                                     <option value="">Белый</option>
@@ -71,10 +87,7 @@ const CatalogItem = () => {
                                 <p
                                     className={'max-w-[445px] text-2xl text-black mt-[12px]'}
                                 >
-                                    В большинстве случаев мужчины для деловой и повседневной жизни выбирают рубашки
-                                    спокойных оттенков и носят их по всем классическим правилам, где рубашка гораздо
-                                    светлее пиджака и брюк. При таком подходе выбор цвета сорочки останавливается на
-                                    белом, цвета шампань или голубом.
+                                    {searchData[0].description}
                                 </p>
                             </div>
                         </div>
