@@ -3,7 +3,6 @@ import Footer from "../../components/Footer/Footer.tsx";
 import ProductData from "../../components/ProductCard/ProductData.tsx";
 import {useEffect} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import {name} from "autoprefixer";
 
 const CatalogItem = () => {
     const {id} = useParams<{id:string}>()

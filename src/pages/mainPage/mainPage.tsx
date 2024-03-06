@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import '@fontsource/montserrat-alternates';
+import {Link} from "react-router-dom";
 
 export default function MainPage() {
     return (
@@ -24,9 +25,9 @@ export default function MainPage() {
                         >
                             <img src="/logotype.svg" alt="logotype" className={'w-[687px]'}/>
                             <p className={'text-white text-[32px]'}>БРЕНД ОДЕЖДЫ</p>
-                            <a href="#"
-                               className={'w-[390px] h-24 flex justify-center items-center text-white text-2xl uppercase bg-[#735184] rounded-[20px]'}>Перейти
-                                в категории</a>
+                            <div
+                               className={'w-[390px] h-24 flex justify-center items-center text-white text-2xl uppercase bg-[#735184] rounded-[20px]'}>
+                                <Link to={'/catalog'}>Перейти каталог</Link></div>
                         </div>
                     </div>
                 </div>

@@ -2,8 +2,24 @@ import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import ProductCard from "../../components/ProductCard/ProductCard.tsx";
 import ProductData from "../../components/ProductCard/ProductData.tsx";
+import React, {useState} from "react";
 
 const Catalog = () => {
+
+    const [search, setSearch] = useState('')
+
+    const [stateSearch, setStateSearch] = useState(false)
+
+    const handleSearchInput = (e: React.FormEvent<HTMLInputElement>) => {
+        setSearch(e.target.value)
+        if (e.target.value.length > 3) {
+            setStateSearch(true)
+        } else {
+            setStateSearch(false)
+        }
+    }
+
+
     return (
         <>
             <Header/>
@@ -32,10 +48,25 @@ const Catalog = () => {
                         <div
                             className={'my-20'}
                         >
+                            <div className={'my-10'}>
+                                <input
+                                    onChange={handleSearchInput}
+                                    className={'border-2 border-[#735184] rounded w-full h-12 pl-3 outline-none'}
+                                    type="text"
+                                    placeholder={'Поиск товара'}
+                                    value={search}
+                                />
+                            </div>
                             <ul className={'catalog-list'}>
-                                {ProductData.map((product) => (
-                                    <ProductCard Card={product}/>
-                                ))}
+                                {stateSearch ?
+                                    (ProductData.filter((item) => item.name.toLowerCase().includes(search.toLowerCase())).length > 0 ?
+                                            ProductData.filter((item) => item.name.toLowerCase().includes(search.toLowerCase())).map((product) =>
+                                                (<ProductCard Card={product}/>))
+                                            : `По запросу ${search} ничего не найдено`
+                                    )
+                                    :
+                                    ProductData.map((product) => (<ProductCard Card={product}/>))
+                                }
                             </ul>
                         </div>
                     </div>
@@ -43,7 +74,8 @@ const Catalog = () => {
             </main>
             <Footer/>
         </>
-    );
+    )
+        ;
 };
 
 export default Catalog;
