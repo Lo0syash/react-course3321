@@ -1,20 +1,19 @@
 import {Link} from "react-router-dom";
+import React from "react";
 
 interface Produсt {
-    Card: {
-        id: number;
-        image: string;
-        name: string;
-        description: string;
-        price: string;
-    }
+    id: number;
+    image: string;
+    name: string;
+    description: string;
+    price: string;
 }
 
-const ProductCard = ({Card}: Produсt) => {
+const ProductCard = () => {
     return (
         <>
             <Link to={`/catalog/item/${Card.id}`}
-                className={'max-w-[384px]'}
+                  className={'max-w-[384px]'}
             >
                 {/*<img src="/assets/images/products/tshirt_smile.jpg" alt="twhisrt smile"/>*/}
                 <img src={Card.image} alt="twhisrt smile"/>
@@ -35,7 +34,7 @@ const ProductCard = ({Card}: Produсt) => {
                                 <span
                                     className={'absolute right-[-10px] bg-[#735184] text-white text-[13px] rounded-full w-[45px] h-[40px] top-[5px] flex items-center justify-center'}
                                 ><svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
+                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M15.8125 6.79688V9.51562H0.21875V6.79688H15.8125ZM9.46875 0.15625V16.7188H6.57812V0.15625H9.46875Z"
                                         fill="white"/>
