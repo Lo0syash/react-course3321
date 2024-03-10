@@ -47,9 +47,9 @@ export default function MainPage() {
                                     >
                                         <p className={'text-white text-3xl'}>9999 ₽</p>
                                         <div className={'flex items-center gap-[23px]'}>
-                                            <a href=""><img src="/assets/icons/heart.svg" alt="heart"
-                                                            className={'w-[56px]'}/></a>
-                                            <a href="#" className={'relative'}>
+                                            <Link to="#"><img src="/assets/icons/heart.svg" alt="heart"
+                                                            className={'w-[56px]'}/></Link>
+                                            <Link to="#" className={'relative'}>
                                                 <img src="/assets/icons/basket.svg" alt="basket"
                                                      className={'w-[69px] h-[52px]'}/>
                                                 <span
@@ -62,7 +62,7 @@ export default function MainPage() {
                                                             fill="white"/>
                                                     </svg>
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -78,9 +78,9 @@ export default function MainPage() {
                                     >
                                         <p className={'text-white text-3xl'}>9999 ₽</p>
                                         <div className={'flex items-center gap-[23px]'}>
-                                            <a href=""><img src="/assets/icons/heart.svg" alt="heart"
-                                                            className={'w-[56px]'}/></a>
-                                            <a href="#" className={'relative'}>
+                                            <Link to="#"><img src="/assets/icons/heart.svg" alt="heart"
+                                                            className={'w-[56px]'}/></Link>
+                                            <Link to="#" className={'relative'}>
                                                 <img src="/assets/icons/basket.svg" alt="basket"
                                                      className={'w-[69px] h-[52px]'}/>
                                                 <span
@@ -93,7 +93,7 @@ export default function MainPage() {
                                                             fill="white"/>
                                                     </svg>
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -109,9 +109,9 @@ export default function MainPage() {
                                     >
                                         <p className={'text-white text-3xl'}>9999 ₽</p>
                                         <div className={'flex items-center gap-[23px]'}>
-                                            <a href=""><img src="/assets/icons/heart.svg" alt="heart"
-                                                            className={'w-[56px]'}/></a>
-                                            <a href="#" className={'relative'}>
+                                            <Link to="#"><img src="/assets/icons/heart.svg" alt="heart"
+                                                            className={'w-[56px]'}/></Link>
+                                            <Link to="#" className={'relative'}>
                                                 <img src="/assets/icons/basket.svg" alt="basket"
                                                      className={'w-[69px] h-[52px]'}/>
                                                 <span
@@ -124,7 +124,7 @@ export default function MainPage() {
                                                             fill="white"/>
                                                     </svg>
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

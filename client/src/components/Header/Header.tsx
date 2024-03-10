@@ -8,7 +8,7 @@ export default function Header() {
                     className={'flex justify-between items-center'}
                 >
                     <div className={'flex items-center gap-5'}>
-                        <a href="#" className="logotype"><img src="/logotype.svg" alt="logotype"/></a>
+                        <Link to="#" className="logotype"><img src="/logotype.svg" alt="logotype"/></Link>
                         <nav>
                             <ul
                                 className={'flex items-center gap-2.5'}
@@ -26,14 +26,14 @@ export default function Header() {
                     <div
                         className={'flex items-center gap-[25px]'}
                     >
-                        <a href="#"><img src="/assets/icons/search.svg" alt="search"/></a>
-                        <a href="#" className={'relative'}>
+                        <Link to="#"><img src="/assets/icons/search.svg" alt="search"/></Link>
+                        <Link to="#" className={'relative'}>
                             <img src="/assets/icons/basket.svg" alt="basket"/>
                             <span
                                 className={'absolute right-[-10px] bg-[#735184] text-white text-[13px] px-[5.5px] rounded-full top-[5px]'}
                             >0</span>
-                        </a>
-                        <a href="#"><img src="/assets/icons/heart.svg" alt="heart"/></a>
+                        </Link>
+                        <Link to="#"><img src="/assets/icons/heart.svg" alt="heart"/></Link>
                     </div>
                 </div>
             </div>

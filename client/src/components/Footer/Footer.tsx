@@ -8,7 +8,7 @@ const Footer = () => {
                     className={'flex justify-between items-center'}
                 >
                     <div className={'flex items-center gap-5'}>
-                        <a href="#" className="logotype"><img src="/logotype.svg" alt="logotype"/></a>
+                        <Link to="#" className="logotype"><img src="/logotype.svg" alt="logotype"/></Link>
                         <nav>
                             <ul
                                 className={'flex items-center gap-2.5'}
@@ -27,10 +27,10 @@ const Footer = () => {
                         className={'flex items-center gap-[6px] flex-col'}
                     >
                         <p className={'text-white text-[16px] uppercase'}>г. Казань, ул. бари галеева 3а </p>
-                        <a href="tel:+7 (927) 482-09-82" className={'text-white text-[16px] uppercase'}>+7 (927)
-                            482-09-82</a>
-                        <a href="mailto:Kuzmakolom@gMAIL.RU"
-                           className={'text-white text-[16px] uppercase'}>Kuzmakolom@gMAIL.RU</a>
+                        <Link to="tel:+7 (927) 482-09-82" className={'text-white text-[16px] uppercase'}>+7 (927)
+                            482-09-82</Link>
+                        <Link to="mailto:Kuzmakolom@gMAIL.RU"
+                           className={'text-white text-[16px] uppercase'}>Kuzmakolom@gMAIL.RU</Link>
                     </div>
                 </div>
             </div>

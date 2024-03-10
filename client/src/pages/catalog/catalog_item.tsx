@@ -2,7 +2,7 @@ import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import ProductData from "../../components/ProductCard/ProductData.tsx";
 import {useEffect} from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 
 const CatalogItem = () => {
     const {id} = useParams<{id:string}>()
@@ -26,11 +26,11 @@ const CatalogItem = () => {
                         <ul
                             className={'flex items-center gap-[11px]'}
                         >
-                            <li><a href="/" className={'text-xl text-black'}>Главная</a></li>
+                            <li><Link to="/" className={'text-xl text-black'}>Главная</Link></li>
                             <p className={'text-xl text-black'}>\</p>
-                            <li><a href="/catalog" className={'text-xl text-black'}>Каталог</a></li>
+                            <li><Link to="/catalog" className={'text-xl text-black'}>Каталог</Link></li>
                             <p className={'text-xl text-black'}>\</p>
-                            <li><a href="#" className={'text-xl text-black'}>{searchData[0].name}</a></li>
+                            <li><Link to="#" className={'text-xl text-black'}>{searchData[0].name}</Link></li>
                         </ul>
                     </div>
                     <div className={'my-[23px] flex justify-between'}>
@@ -75,13 +75,13 @@ const CatalogItem = () => {
                                 <div
                                     className={'mt-[12px] flex items-center gap-[13px]'}
                                 >
-                                    <a href=""
+                                    <Link to="#"
                                        className={'px-[12px] py-[29px] bg-[#735184] text-white text-2xl uppercase'}
-                                    >Добавить в корзину</a>
-                                    <a href="#"
+                                    >Добавить в корзину</Link>
+                                    <Link to="#"
                                        className={'py-[16px] px-[19px] bg-[#735184]'}
                                     ><img src="/assets/icons/heart.svg" alt="heart"
-                                          className={'w-[65px] h-[57px]'}/></a>
+                                          className={'w-[65px] h-[57px]'}/></Link>
                                 </div>
                                 <p
                                     className={'max-w-[445px] text-2xl text-black mt-[12px]'}

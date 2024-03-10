@@ -1,34 +1,38 @@
 import {Link} from "react-router-dom";
 import React from "react";
 
-interface Produсt {
-    id: number;
-    image: string;
-    name: string;
-    description: string;
-    price: string;
+interface ProductCardProps {
+    product: Product;
 }
 
-const ProductCard = () => {
+interface Product {
+    id: number,
+    name: string,
+    description: string,
+    price: number,
+    images: string
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <>
-            <Link to={`/catalog/item/${Card.id}`}
+            <Link to={`/catalog/item/${product.id}`}
                   className={'max-w-[384px]'}
             >
                 {/*<img src="/assets/images/products/tshirt_smile.jpg" alt="twhisrt smile"/>*/}
-                <img src={Card.image} alt="twhisrt smile"/>
+                <img src={product.images} alt="twhisrt smile"/>
                 <div
                     className={'flex flex-col gap-[13px] px-6 pt-[31px] pb-[35px]'}
                 >
-                    <h2 className={'text-black text-3xl'}>{Card.name}</h2>
+                    <h2 className={'text-black text-3xl'}>{product.name}</h2>
                     <div
                         className={'flex items-center justify-between'}
                     >
-                        <p className={'text-black text-3xl'}>{Card.price} ₽</p>
+                        <p className={'text-black text-3xl'}>{product.price} ₽</p>
                         <div className={'flex items-center gap-[23px]'}>
-                            <a href=""><img src="/assets/icons/heart-black.svg" alt="heart"
-                                            className={'w-[56px]'}/></a>
-                            <a href="#" className={'relative'}>
+                            <Link to="#"><img src="/assets/icons/heart-black.svg" alt="heart"
+                                            className={'w-[56px]'}/></Link>
+                            <Link to="#" className={'relative'}>
                                 <img src="/assets/icons/basket-black.svg" alt="basket"
                                      className={'w-[69px] h-[52px]'}/>
                                 <span
@@ -39,7 +43,7 @@ const ProductCard = () => {
                                         d="M15.8125 6.79688V9.51562H0.21875V6.79688H15.8125ZM9.46875 0.15625V16.7188H6.57812V0.15625H9.46875Z"
                                         fill="white"/>
                                 </svg></span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
